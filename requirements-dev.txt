@@ -1,0 +1,4 @@
+black==25.1.0
+ruff==0.12.10
+pytest==8.4.1
+ipython==9.4.0
