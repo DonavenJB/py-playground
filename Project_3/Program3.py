@@ -78,4 +78,4 @@ while True:
     if again != "YES":
         break
 
-print("=== Done ===")
+print("*** Done ***")
