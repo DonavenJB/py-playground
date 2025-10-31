@@ -1,0 +1,73 @@
+# ---------------------------------------
+# Python: Bytecode, caches, coverage
+# ---------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.pytype/
+.hypothesis/
+.ipynb_checkpoints/
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# ---------------------------------------
+# Build / packaging artifacts
+# ---------------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+# ---------------------------------------
+# Virtual environments & tooling
+# ---------------------------------------
+.venv/
+venv/
+ENV/
+env/
+.env
+.env.*
+.tox/
+.nox/
+
+# ---------------------------------------
+# Editors / IDEs
+# ---------------------------------------
+.vscode/
+.idea/
+.ropeproject/
+.history/
+
+# ---------------------------------------
+# Logs & temp files
+# ---------------------------------------
+*.log
+logs/
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# ---------------------------------------
+# OS cruft
+# ---------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ---------------------------------------
+# Project-specific exclusions
+# (You said "only Python" for this repo)
+# ---------------------------------------
+*.cpp
+git
+pyproject.toml
+requirements-dev.txt
