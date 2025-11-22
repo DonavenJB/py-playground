@@ -1,40 +1,64 @@
-#Student: Donaven Bruce
-
-#Instructor: Kaleab Gorfu
-
-#CS 119 : Intro to Comp Sci
-
-# Get valid score between 0 and 100
-def get_score(prompt):
+# Get valid integer in range
+def get_int_input(prompt, min_val, max_val):
     while True:
         try:
-            value = float(input(prompt))
-            if 0 <= value <= 100:
-                return value
-            print("Score must be between 0 and 100.")
+            val = int(input(prompt))
+            if min_val <= val <= max_val:
+                return val
+            print(f"Input must be between {min_val} and {max_val}. Try again.")
         except ValueError:
-            print("Invalid input. Enter a valid number.")
+            print("Invalid input. Please enter a whole number.")
 
-# Collect five scores
-scores = []
-for i in range(1, 6):
-    score = get_score(f"Enter score {i}: ")
-    scores.append(score)
+# Ask for month number
+month_num = get_int_input("Enter the month number 1=Jan, 12=Dec: ", 1, 12)
 
-# Calculate average
-average = sum(scores) / len(scores)
-print(f"\nAverage score: {average:.2f}")
+days = 0
+month_name = ""
 
-# Assign letter grade
-if average >= 90:
-    grade = 'A'
-elif average >= 80:
-    grade = 'B'
-elif average >= 70:
-    grade = 'C'
-elif average >= 60:
-    grade = 'D'
+# Set month name and days
+if month_num == 1:
+    month_name = "January"
+    days = 31
+elif month_num == 2:
+    month_name = "February"
+    is_leap = get_int_input("Is this a leap year? Enter 1 for Yes, 0 for No: ", 0, 1)
+    days = 29 if is_leap else 28
+elif month_num == 3:
+    month_name = "March"
+    days = 31
+elif month_num == 4:
+    month_name = "April"
+    days = 30
+elif month_num == 5:
+    month_name = "May"
+    days = 31
+elif month_num == 6:
+    month_name = "June"
+    days = 30
+elif month_num == 7:
+    month_name = "July"
+    days = 31
+elif month_num == 8:
+    month_name = "August"
+    days = 31
+elif month_num == 9:
+    month_name = "September"
+    days = 30
+elif month_num == 10:
+    month_name = "October"
+    days = 31
+elif month_num == 11:
+    month_name = "November"
+    days = 30
 else:
-    grade = 'F'
+    month_name = "December"
+    days = 31
 
-print(f"Grade: {grade}")
+# Convert days to hours, minutes, seconds
+hours = days * 24
+minutes = hours * 60
+seconds = minutes * 60
+
+# Show result
+print(f"{month_name} is the {month_num}th month.")
+print(f"This month has {days} days, {hours} hrs, {minutes} min, {seconds} sec.")
